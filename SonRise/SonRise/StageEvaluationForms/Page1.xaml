@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SonRise.StageEvaluationForms.Page1"
+             Title="Eye Contact and Non-Verbal Communication">
+    <ContentPage.Content Title="Eye Contact and Non-Verbal Communication">
+        <StackLayout>
+            <Grid BackgroundColor="White" Padding="20,20,20,20" ColumnSpacing="5" RowSpacing="5" VerticalOptions="StartAndExpand">
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="EyeContactFunPicker" Title="Function of Eye Contact" SelectedIndex="{Binding EyeContact}">
+                        <Picker.Items>
+                            <x:String>S1. Looks at others to start / continue an interaction</x:String>
+                            <x:String>S2. Makes eye contact to get needs met</x:String>
+                            <x:String>S3. Uses eye contact to draw attention to objects / events of interest</x:String>
+                            <x:String>S4. Looks to maintain other's attention</x:String>
+                            <x:String>S5. Looks to evaluate other's social clues</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="ExpressionSharingPicker" Title="Expression Sharing" SelectedIndex="{Binding ExpressionSharing}">
+                        <Picker.Items>
+                            <x:String>S1. Looks with occasional flickers of expression</x:String>
+                            <x:String>S2. Smiles or laughs while in an interaction</x:String>
+                            <x:String>S3. Copies some simple exaggerated facial movements</x:String>
+                            <x:String>S4. Spontaneously demonstrates a range of facial expressions</x:String>
+                            <x:String>S5. Responds appropriately to other's facial expressions</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="NonVerbalCommPicker" Title="Non-Verbal Communication" SelectedIndex="{Binding NonVerbalComm}">
+                        <Picker.Items>
+                            <x:String>S1. Physically moves to get what he/she wants</x:String>
+                            <x:String>S2. Simple gestures upon request</x:String>
+                            <x:String>S3. Spontaneous simple gestures</x:String>
+                            <x:String>S4. Uses spontaneous gestures to enhance verbal communication</x:String>
+                            <x:String>S5. Understands, responds to and uses basic social cues</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </Grid>
+
+            <Button Text="Next" Clicked="Next_Clicked" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

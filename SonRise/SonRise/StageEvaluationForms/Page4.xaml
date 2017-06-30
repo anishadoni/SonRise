@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SonRise.StageEvaluationForms.Page4"
+             Title="Flexibility">
+    <ContentPage.Content Title="Flexibility">
+        <StackLayout>
+            <Grid BackgroundColor="White" Padding="20,20,20,20" ColumnSpacing="5" RowSpacing="5" VerticalOptions="StartAndExpand">
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="FlexibilityPicker" Title="Flexibility" SelectedIndex="{Binding Flexibility}">
+                        <Picker.Items>
+                            <x:String>S1. Allows you to assist within his/her repetitious interactions</x:String>
+                            <x:String>S2. Allows peripheral veriations to his/her repetitious interactions / Physically participates in the interaction / Verbally participates in the interaction</x:String>
+                            <x:String>S3. Allows central variations to his/her repetitious interactions / Shows an interest in another's activity</x:String>
+                            <x:String>S4. Flexible within his/her area of interest / Allows variations within another's activity / Shares interactive time between his/her activity and another's activity</x:String>
+                            <x:String>S5. Flexible within a variety of activities / Spontaneous within a variety of activities</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="SensoryInputPicker" Title="Coping with Sensory Input" SelectedIndex="{Binding SensoryInput}">
+                        <Picker.Items>
+                            <x:String>S1. Settles easily within a higly supportive environment</x:String>
+                            <x:String>S2. Calmly and easily handles limits and boundaries within a highly supportive environment</x:String>
+                            <x:String>S3. Interacts easily in a moderately supportive environment</x:String>
+                            <x:String>S4. Manages sensory input and change in typical age appropriate environments, with help</x:String>
+                            <x:String>S5. Calmly and easily manages most transitions and unstructured situations</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </Grid>
+
+            <Button Text="Finish" Clicked="Finish_Clicked" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SonRise.StageEvaluationForms.Page3"
+             Title="Interactive Attention Span">
+    <ContentPage.Content Title="Interactive Attention Span">
+        <StackLayout>
+            <Grid BackgroundColor="White" Padding="20,20,20,20" ColumnSpacing="5" RowSpacing="5" VerticalOptions="StartAndExpand">
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="DurationPicker" Title="Duration" SelectedIndex="{Binding Duration}">
+                        <Picker.Items>
+                            <x:String>S1. Up to 2 min.</x:String>
+                            <x:String>S2. 3-4 min.</x:String>
+                            <x:String>S3. 5-9 min.</x:String>
+                            <x:String>S4. 10-20 min.</x:String>
+                            <x:String>S5. Age Appropriate(typically 3-5 min. per year of child's age)</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="FrequencyPicker" Title="Frequency" SelectedIndex="{Binding Frequency}">
+                        <Picker.Items>
+                            <x:String>S1. Up to 3x / hour</x:String>
+                            <x:String>S2. 4x / hour</x:String>
+                            <x:String>S3. 5x / hour or more</x:String>
+                            <x:String>S4. Up to 5x / hour (10 min. Duration req.)</x:String>
+                            <x:String>S5. Continuously Interactive</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="ActivitiesPicker" Title="Type of Activities" SelectedIndex="{Binding ActivityType}">
+                        <Picker.Items>
+                            <x:String>S1. Interacts within shared physical activities</x:String>
+                            <x:String>S2. Interacts around simple shared objects/activities</x:String>
+                            <x:String>S3. Interacts within symbolic imaginative play</x:String>
+                            <x:String>S4. Interacts within imaginative role-play activities</x:String>
+                            <x:String>S5. Interacts within a variety of activities</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="PeerFriendshipsPicker" Title="Peer Friendships" SelectedIndex="{Binding PeerFriendships}">
+                        <Picker.Items>
+                            <x:String>S1. Fleeting or no interest in peers</x:String>
+                            <x:String>S2. Plays beside peers showing interest without interacting with them</x:String>
+                            <x:String>S3. Simple interactions with peers</x:String>
+                            <x:String>S4. Interacts appropriately with a peer</x:String>
+                            <x:String>S5. Appropriately interacts with small groups of peers</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+            </Grid>
+
+            <Button Text="Next" Clicked="Next_Clicked" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

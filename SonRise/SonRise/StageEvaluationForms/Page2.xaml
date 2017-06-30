@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SonRise.StageEvaluationForms.Page2"
+             Title="Verbal Communication">
+    <ContentPage.Content Title="Verbal Communication">
+        <StackLayout>
+            <Grid BackgroundColor="White" Padding="20,20,20,20" ColumnSpacing="5" RowSpacing="5" VerticalOptions="StartAndExpand">
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="VocabularyContentPicker" Title="Vocabulary/Content" SelectedIndex="{Binding VocabContent}">
+                        <Picker.Items>
+                            <x:String>S1. Speech-like sounds to 50 single words.</x:String>
+                            <x:String>S2. Simple phrases (2-3 word combinations)</x:String>
+                            <x:String>S3. Simple sentences (noun+verb)</x:String>
+                            <x:String>S4. Complex sentences (grammatically correct)</x:String>
+                            <x:String>S5. Combined complex sentences</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="PartsofSpeechPicker" Title="Parts of Speech" SelectedIndex="{Binding PartsofSpeech}">
+                        <Picker.Items>
+                            <x:String>S1. Nouns and/or Verbs</x:String>
+                            <x:String>S2. Articles and/or Prepositions</x:String>
+                            <x:String>S3. Articles and/or Conjunctions</x:String>
+                            <x:String>S4. Pronouns</x:String>
+                            <x:String>S5. Fluent use of all parts of speech</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="ClarityPicker" Title="Clarity" SelectedIndex="{Binding Clarity}">
+                        <Picker.Items>
+                            <x:String>Partially Clear</x:String>
+                            <x:String>Generally Clear</x:String>
+                            <x:String>Consistently Clear</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="ConversationLoopsPicker" Title="Conversation Loops" SelectedIndex="{Binding ConversationLoops}">
+                        <Picker.Items>
+                            <x:String>S1. N/A</x:String>
+                            <x:String>S2. 1 loop</x:String>
+                            <x:String>S3. 2 loops</x:String>
+                            <x:String>S4. 3-5 loops</x:String>
+                            <x:String>S5. 6 loops or more</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="ConversationContentPicker" Title="Conversation Content" SelectedIndex="{Binding ConversationContent}">
+                        <Picker.Items>
+                            <x:String>S1. Prompted(requested by other)</x:String>
+                            <x:String>S2. Spontaneously (unprompted)</x:String>
+                            <x:String>S3. Makes simple comments / Asks/answers simple questions / Spontaneously constructs original sentences</x:String>
+                            <x:String>S4. Makes copmlex statements / Asks/answers complex questions</x:String>
+                            <x:String>S5. Makes reflective comments and asks relevant reflective questions</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50">
+                    <Picker x:Name="VerbalPurposePicker" Title="Function of Verbal Comm." SelectedIndex="{Binding VerbalCommFunc}">
+                        <Picker.Items>
+                            <x:String>S1. To get needs met</x:String>
+                            <x:String>S2. To start/continue an interaction</x:String>
+                            <x:String>S3. To create a shared experience</x:String>
+                            <x:String>S4. To share coherent stories(relevant to the conversation) / To seek others' personal information within a conversation</x:String>
+                            <x:String>S5. To seek others' or share one's own internal experiences(emotions + thoughts)</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+            </Grid>
+
+            <Button Text="Next" Clicked="Next_Clicked" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
